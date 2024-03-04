@@ -6,66 +6,10 @@
       <field name="inherit_id" ref="sale.view_order_form" />
       <field name="mode">extension</field>
       <field name="arch" type="xml">
-          <xpath expr="//field[@name='partner_id']" position="after">
-              <field name="rfc" />
-          </xpath>
-      </field>
-  </record>
-    <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="odoo_exam_prixz.list">
-      <field name="name">odoo_exam_prixz list</field>
-      <field name="model">odoo_exam_prixz.odoo_exam_prixz</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
+        <xpath expr="//field[@name='partner_id']" position="after">
+          <field name="rfc" />
+        </xpath>
       </field>
     </record>
--->
-
-    <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="odoo_exam_prixz.action_window">
-      <field name="name">odoo_exam_prixz window</field>
-      <field name="res_model">odoo_exam_prixz.odoo_exam_prixz</field>
-      <field name="view_mode">tree,form</field>
-    </record>
--->
-
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="odoo_exam_prixz.action_server">
-      <field name="name">odoo_exam_prixz server</field>
-      <field name="model_id" ref="model_odoo_exam_prixz_odoo_exam_prixz"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
-
-    <!-- Top menu item -->
-<!--
-    <menuitem name="odoo_exam_prixz" id="odoo_exam_prixz.menu_root"/>
--->
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="odoo_exam_prixz.menu_1" parent="odoo_exam_prixz.menu_root"/>
-    <menuitem name="Menu 2" id="odoo_exam_prixz.menu_2" parent="odoo_exam_prixz.menu_root"/>
--->
-    <!-- actions -->
-<!--
-    <menuitem name="List" id="odoo_exam_prixz.menu_1_list" parent="odoo_exam_prixz.menu_1"
-              action="odoo_exam_prixz.action_window"/>
-    <menuitem name="Server to list" id="odoo_exam_prixz" parent="odoo_exam_prixz.menu_2"
-              action="odoo_exam_prixz.action_server"/>
--->
   </data>
 </odoo>
